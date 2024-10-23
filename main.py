@@ -6,3 +6,5 @@ elif x > 0:
     print("x is positive")
 else:
     print("x is negative")
+
+#FINALIZEI A AULA 03 PRECISO RESOLVER OS EXERCICIOS!!!
