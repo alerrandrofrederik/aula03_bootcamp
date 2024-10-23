@@ -1,5 +1,8 @@
-print("esse é o primeiro comando")
+x = 0
 
-print("esse é o segundo comando")
-
-print("esse é o terceiro comando")
+if x == 0:
+    print("x is zero")
+elif x > 0:
+    print("x is positive")
+else:
+    print("x is negative")
