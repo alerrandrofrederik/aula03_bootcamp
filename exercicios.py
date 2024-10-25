@@ -5,21 +5,23 @@
 # forem positivos ou "Dados inválidos" caso contrário.
 
 vendas = [
-    {'quantidade': 10, 'preço': 2500},
-    {'quantidade': 15, 'preço': -1500},
-    {'quantidade': 20, 'preço': 4000},
-    {'quantidade': -5, 'preço': 8000}
+    {"valor": 2, "quantidade": 5},
+    {"valor": -2, "quantidade": 5},
+    {"valor": 1, "quantidade": 15},
+    {"valor": 2, "quantidade": -5},
 ]
 
-vendas_validos = []
-for item in vendas:
-    if item['quantidade'] > 0 and item['preço'] > 0:
+vendas_validas = []
+
+for venda in vendas:
+    if venda["valor"] > 0 and venda["quantidade"] > 0:
+        vendas_validas.append(venda)
         print("Dados válidos")
-        vendas_validos.append(item)
     else:
         print("Dados inválidos")
 
-print(vendas_validos)
+print(vendas_validas)
+
 
 
 ### Exercício 2: Classificação de Dados de Sensor
