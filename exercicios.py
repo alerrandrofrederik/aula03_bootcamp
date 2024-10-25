@@ -79,25 +79,39 @@
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
-usuarios = [
-    {"idade": 15, "email": "a@a.com"},
-    {"idade": 19, "email": "b_b.com"},
-    {"idade": 20, "email": "c@c.com"},
-    {"idade": 67, "email": "d@d_com"}
-]
+# usuarios = [
+#     {"idade": 15, "email": "a@a.com"},
+#     {"idade": 19, "email": "b_b.com"},
+#     {"idade": 20, "email": "c@c.com"},
+#     {"idade": 67, "email": "d@d_com"}
+# ]
 
-for usuario in usuarios:
-    if usuario["idade"] >= 18 and usuario["idade"] <= 65 and "@" in usuario["email"]:
-        print("Dados de usuário válidos")
-    else:
-        print("Dados de usuário inválidos")
+# for usuario in usuarios:
+#     if usuario["idade"] >= 18 and usuario["idade"] <= 65 and "@" in usuario["email"]:
+#         print("Dados de usuário válidos")
+#     else:
+#         print("Dados de usuário inválidos")
 
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
-# Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
+# Dada uma transação como `transacao = {'valor': 12000, 'horario': 20}`, verifique se ela é suspeita.
+
+transacoes = [
+    {'valor': 12000, 'horario': 20},
+    {'valor': 10000, 'horario': 10},
+    {'valor': 8000, 'horario': 15},
+    {'valor': 5000, 'horario': 8}
+]
+
+for transacao in transacoes:
+    if transacao["valor"] > 10000 or int(transacao['horario']) < 9 or int(transacao['horario'] > 18):
+        print("Transação suspeita")
+    else:
+        print("Transação normal")
+
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
