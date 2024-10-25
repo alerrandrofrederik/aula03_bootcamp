@@ -4,23 +4,23 @@
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
 
-vendas = [
-    {"valor": 2, "quantidade": 5},
-    {"valor": -2, "quantidade": 5},
-    {"valor": 1, "quantidade": 15},
-    {"valor": 2, "quantidade": -5},
-]
+# vendas = [
+#     {"valor": 2, "quantidade": 5},
+#     {"valor": -2, "quantidade": 5},
+#     {"valor": 1, "quantidade": 15},
+#     {"valor": 2, "quantidade": -5},
+# ]
 
-vendas_validas = []
+# vendas_validas = []
 
-for venda in vendas:
-    if venda["valor"] > 0 and venda["quantidade"] > 0:
-        vendas_validas.append(venda)
-        print("Dados válidos")
-    else:
-        print("Dados inválidos")
+# for venda in vendas:
+#     if venda["valor"] > 0 and venda["quantidade"] > 0:
+#         vendas_validas.append(venda)
+#         print("Dados válidos")
+#     else:
+#         print("Dados inválidos")
 
-print(vendas_validas)
+# print(vendas_validas)
 
 
 
@@ -28,6 +28,33 @@ print(vendas_validas)
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
 # como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+
+# - 0 <= temperatura <= 20: 'Baixa'
+# - 21 <= temperatura <= 40: 'Normal'
+# - temperatura > 40: 'Alta'
+
+# Escreva um programa que classifique cada leitura e imprima 'Baixa', 'Normal' ou 'Alta'.
+
+registros_temperatura = [
+    {"temperatura": 0},
+    {"temperatura": 5},
+    {"temperatura": 10},
+    {"temperatura": 15},
+    {"temperatura": 20},
+    {"temperatura": 25},
+    {"temperatura": 30},
+    {"temperatura": 35},
+    {"temperatura": 40},
+    {"temperatura": 45}
+]
+
+for registro in registros_temperatura:
+    if registro["temperatura"] <= 20:
+        print("Baixa")
+    elif registro["temperatura"] <= 40:
+        print("Normal")
+    else:
+        print("Alta")
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
