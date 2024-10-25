@@ -62,15 +62,15 @@
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
-log = [{'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'},
-    {'timestamp': '2021-06-23 10:00:00', 'level': 'INFO', 'message': 'Conexão estabelecida'},
-    {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}]
+# log = [{'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'},
+#     {'timestamp': '2021-06-23 10:00:00', 'level': 'INFO', 'message': 'Conexão estabelecida'},
+#     {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}]
 
-for log in log:
-    if log["level"] == "ERROR":
-        print(log["message"])
-    else:
-        print("Nenhuma mensagem de erro encontrada")
+# for log in log:
+#     if log["level"] == "ERROR":
+#         print(log["message"])
+#     else:
+#         print("Nenhuma mensagem de erro encontrada")
 
 
 ### Exercício 4: Validação de Dados de Entrada
@@ -78,6 +78,20 @@ for log in log:
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+
+usuarios = [
+    {"idade": 15, "email": "a@a.com"},
+    {"idade": 19, "email": "b_b.com"},
+    {"idade": 20, "email": "c@c.com"},
+    {"idade": 67, "email": "d@d_com"}
+]
+
+for usuario in usuarios:
+    if usuario["idade"] >= 18 and usuario["idade"] <= 65 and "@" in usuario["email"]:
+        print("Dados de usuário válidos")
+    else:
+        print("Dados de usuário inválidos")
+
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
