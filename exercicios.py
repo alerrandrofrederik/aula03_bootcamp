@@ -35,32 +35,43 @@
 
 # Escreva um programa que classifique cada leitura e imprima 'Baixa', 'Normal' ou 'Alta'.
 
-registros_temperatura = [
-    {"temperatura": 0},
-    {"temperatura": 5},
-    {"temperatura": 10},
-    {"temperatura": 15},
-    {"temperatura": 20},
-    {"temperatura": 25},
-    {"temperatura": 30},
-    {"temperatura": 35},
-    {"temperatura": 40},
-    {"temperatura": 45}
-]
+# registros_temperatura = [
+#     {"temperatura": 0},
+#     {"temperatura": 5},
+#     {"temperatura": 10},
+#     {"temperatura": 15},
+#     {"temperatura": 20},
+#     {"temperatura": 25},
+#     {"temperatura": 30},
+#     {"temperatura": 35},
+#     {"temperatura": 40},
+#     {"temperatura": 45}
+# ]
 
-for registro in registros_temperatura:
-    if registro["temperatura"] <= 20:
-        print("Baixa")
-    elif registro["temperatura"] <= 40:
-        print("Normal")
-    else:
-        print("Alta")
+# for registro in registros_temperatura:
+#     if registro["temperatura"] <= 20:
+#         print("Baixa")
+#     elif registro["temperatura"] <= 40:
+#         print("Normal")
+#     else:
+#         print("Alta")
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
 # com severidade 'ERROR'. Dado um registro de log em formato de dicionário 
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
+
+log = [{'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'},
+    {'timestamp': '2021-06-23 10:00:00', 'level': 'INFO', 'message': 'Conexão estabelecida'},
+    {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}]
+
+for log in log:
+    if log["level"] == "ERROR":
+        print(log["message"])
+    else:
+        print("Nenhuma mensagem de erro encontrada")
+
 
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
