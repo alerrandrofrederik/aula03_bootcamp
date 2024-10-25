@@ -4,6 +4,24 @@
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
 
+vendas = [
+    {'quantidade': 10, 'preço': 2500},
+    {'quantidade': 15, 'preço': -1500},
+    {'quantidade': 20, 'preço': 4000},
+    {'quantidade': -5, 'preço': 8000}
+]
+
+vendas_validos = []
+for item in vendas:
+    if item['quantidade'] > 0 and item['preço'] > 0:
+        print("Dados válidos")
+        vendas_validos.append(item)
+    else:
+        print("Dados inválidos")
+
+print(vendas_validos)
+
+
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
